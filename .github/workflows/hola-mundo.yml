@@ -18,6 +18,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+          
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
 
       - name: ▶️ Ejecutar script Hola Mundo
         run: python script-hola-mundo.py
